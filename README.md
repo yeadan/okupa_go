@@ -1,5 +1,5 @@
 # okupa
-__Api creada en [GO](https://golang.org/) para ????. Parte de servidor__  
+__Api creada en [GO](https://golang.org/) para asociación okupa. Parte de servidor__  
 
 
 ## Librerías externas utilizadas:
@@ -12,13 +12,13 @@ __Api creada en [GO](https://golang.org/) para ????. Parte de servidor__
   
 
 __.env utilizado__  
-secret_key=CoronaVirus2020
-DB_HOST=127.0.0.1
-DB_DRIVER=postgres
-DB_USER=sergio
-DB_PASSWORD=bosch
-DB_NAME=okupa_api
-DB_PORT=5432 #Default postgres port
+secret_key=CoronaVirus2020   
+DB_HOST=127.0.0.1   
+DB_DRIVER=postgres   
+DB_USER=sergio   
+DB_PASSWORD=bosch   
+DB_NAME=okupa_api   
+DB_PORT=5432 #Default postgres port   
 
 ## Estructura de la api  
 
