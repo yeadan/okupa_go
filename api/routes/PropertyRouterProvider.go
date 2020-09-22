@@ -158,7 +158,12 @@ func updateProperty(w http.ResponseWriter, r *http.Request) {
 						//Solo administradores
 						errAuth := lib.UserAllowed(userValid.(*models.User), nil, lib.GetString("admin"), w)
 						if errAuth == nil {
-							
+							if editProperty.OwnerID>0 && models.GetOwner(editProperty.OwnerID,db) != nil {
+								property.OwnerID = editProperty.OwnerID
+							}
+							if editProperty.OkupaID>0 && models.GetOkupa(editProperty.OkupaID,db) != nil {
+								property.OkupaID = editProperty.OkupaID
+							}
 							property.Description = editProperty.Description
 							property.Type = editProperty.Type
 							models.EditProperty(property, db)

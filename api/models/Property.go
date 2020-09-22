@@ -9,16 +9,16 @@ import (
 
 // Address - Struct de una direccion
 type Address struct {
-	Calle  			string `json:"calle" valid:"lenght(2|50)"` 
+	Calle  			string `json:"calle" valid:"length(2|50)"` 
 	Numero			int `json:"numero"`
 	Piso			int `json:"piso"`
 	Puerta			string `json:"puerta"` 
 	CodigoPostal	string `json:"codigo_postal"`
-	Nucleo			string `json:"nucleo" valid:"lenght(2|50)"` 
-	Poblacion		string `json:"poblacion" valid:"lenght(2|50)"` 
-	Municipio		string `json:"municipio" valid:"lenght(2|50)"` 
-	Provincia		string `json:"provincia" valid:"lenght(2|50)"` 
-	Comunidad		string `json:"comunidad" valid:"lenght(2|50)"`  
+	Nucleo			string `json:"nucleo" valid:"length(2|50)"` 
+	Poblacion		string `json:"poblacion" valid:"length(2|50)"` 
+	Municipio		string `json:"municipio" valid:"length(2|50)"` 
+	Provincia		string `json:"provincia" valid:"length(2|50)"` 
+	Comunidad		string `json:"comunidad" valid:"length(2|50)"`  
 }
 // Property - Struct con los datos de un property.
 type Property struct {
@@ -26,7 +26,7 @@ type Property struct {
 	OwnerID   		int `gorm:"not null;type:int REFERENCES owners(owner_id) ON DELETE SET NULL" json:"owner_id"`
 	OkupaID		    int `gorm:"not null;type:int REFERENCES okupas(okupa_id) ON DELETE SET NULL" json:"okupa_id"`
 	UserID    		int `gorm:"not null;type:int REFERENCES users(user_id) ON DELETE SET NULL" json:"user_id"` 		
-	Type	  		string `json:"type" valid:"lenght(3|15)"` 
+	Type	  		string `json:"type" valid:"length(3|15)"` 
 	Description 	*string `json:"description" valid:"length(3|200)"`
 	Created     	time.Time `json:"created"`
 	Address
