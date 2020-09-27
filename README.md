@@ -1,5 +1,6 @@
 # okupa
 __Api creada en [GO](https://golang.org/) para asociación okupa. Parte de servidor__  
+__Creado una primera versión de un front en la carpeta public (con Vuejs), que ya está relacionado con el servidor (basta poner en marcha el servidor)__
 
 
 ## Librerías externas utilizadas:
@@ -71,7 +72,7 @@ Registro de las propiedades/edificios
 "/properties"                    - __post__   - Dar de alta propiedades, solo para administradores    
 "/properties"                    - __get__    - Listado de todas las propiedades    
 "/properties/{id:[0-9]+}"        - __get__    - Detalles de una propiedad en concreto   
-"/properties/{id:[0-9]+"         - __put__    - Editar una propiedad. No se puede cambiar ID ni fecha de creación     
+"/properties/{id:[0-9]+"         - __put__    - Editar una propiedad. No se puede cambiar ID ni fecha de creación. Solo administradores     
 "/properties/{id:[0-9]+"         - __delete__ - Borra una propiedad, solo para administradores   
 "/properties/users/{id:[0-9]+}"  - __get__    - Listado de propiedades por usuario   
 "/properties/types/{id:[0-9]+}"  - __get__    - Listado de propiedades por tipo   
