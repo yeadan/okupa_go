@@ -41,11 +41,15 @@ func updateUser(w http.ResponseWriter, r *http.Request) {
 					if err == nil && editUser.Valid(){
 						errAuth := lib.UserAllowed(userValid.(*models.User), &id, lib.GetString("admin"), w)
 						if errAuth == nil {
-							//Codificando el nuevo password
+							//Codificando el nuevo password						
+							if (editUser.Password != "") {
 							passHash := sha256.New()
-							passHash.Write([]byte(editUser.Password))
-							editUser.Password = fmt.Sprintf("%x", passHash.Sum(nil))
-							user.Password = editUser.Password
+								passHash.Write([]byte(editUser.Password))
+								editUser.Password = fmt.Sprintf("%x", passHash.Sum(nil))
+								user.Password = editUser.Password
+							} else {
+								fmt.Println("Password no cambiado")
+							}
 							user.FullName = editUser.FullName
 							errAuth = lib.UserAllowed(userValid.(*models.User), nil, lib.GetString("admin"), w)
 							if errAuth == nil {
