@@ -1,5 +1,5 @@
 [build]
-  command = "./build.sh"
+  command = "go build"
   functions = "functions"
   publish = "public"
 
