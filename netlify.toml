@@ -1,5 +1,5 @@
 [build]
-  command = "./build.sh"
+  command = "bash build.sh"
   functions = "functions"
   publish = "public"
 
