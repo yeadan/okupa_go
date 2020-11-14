@@ -1,2 +1,14 @@
 [build]
-command = “CI= go build”
+  command = “CI= npm run build”
+  functions = "functions"
+  publish = "public"
+
+
+[build.environment]
+  GO_IMPORT_PATH = "github.com/yeadan/okupa"
+  GO111MODULE = "on"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/gateway/:splat"
+  status = 200
