@@ -1,11 +1,10 @@
 [build]
-  command = “./build.sh”
+  command = "./build.sh"
   functions = "functions"
   publish = "public"
 
-
 [build.environment]
-  GO_IMPORT_PATH = "github.com/yeadan/okupa"
+  GO_IMPORT_PATH = "github.com/carlmjohnson/netlify-go-function-demo"
   GO111MODULE = "on"
 
 [[redirects]]
